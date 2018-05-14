@@ -1,0 +1,17 @@
+syntax = "proto3";
+package pb;
+
+//请求
+message UserRq {
+    int32 id = 1;
+}
+
+//响应
+message UserRp {
+    string name = 1;
+}
+
+//服务
+service Data {
+    rpc GetUser(UserRq) returns (UserRp);
+}

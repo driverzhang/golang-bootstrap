@@ -1,0 +1,33 @@
+syntax = "proto3";
+package pb;
+
+//请求
+message GenderPayUrlRq {
+    string OrderID = 1;
+    string ProudctName = 2;
+    int32 PriceTotal = 3;
+    string ProductID = 4;
+    string IP = 5;
+    string ProudctDescription = 6;
+    string NotifyUrl = 7;
+}
+
+//响应
+message GenderPayUrlRp {
+    string CodeUrl = 1;
+    string Status = 2;
+}
+
+message PayNotifyRq {
+    bytes body = 1;
+}
+
+message PayNotifyRp {
+
+}
+
+//服务
+service Data {
+    rpc GenderPayUrl(GenderPayUrlRp) returns (GenderPayUrlRp){};
+    rpc PayNotify(PayNotifyRq) returns (PayNotifyRp){};
+}

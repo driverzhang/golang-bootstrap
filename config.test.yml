@@ -1,0 +1,8 @@
+debug: true
+grpc_addr: ":8081"
+http_addr: ":8080"
+grpc_service:
+  user: ":8081"
+
+mysql:
+  bamboo_website: root:nameim_^9i8@tcp(test.zhuzi.me:3306)/bamboo_payment_v2
